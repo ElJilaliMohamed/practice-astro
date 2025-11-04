@@ -1,0 +1,11 @@
+---
+const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
+const tags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
+---
+
+<div id="main-menu" class="nav-links">
+  <a href="/">Home</a>
+  <a href="/about/">About</a>
+  <a href="/blog/">Blog</a>
+<a href="/tags/">Tags</a>
+</div>
